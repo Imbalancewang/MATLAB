@@ -1,0 +1,13 @@
+clear;
+%load fs.mat;
+[data,fs,nbits]=wavread('C:\Users\dy\Documents\MATLAB\111.wav');
+mode=true;
+player=audioplayer(data,fs);
+player.stopfcn='if mode,play(player);end';
+play(player);
+%mode=false;
+%pause(player);
+%resume(player);
+%mode=true;
+%mode=false;
+%stop(player);
