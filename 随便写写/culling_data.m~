@@ -1,0 +1,26 @@
+%culling_data
+%vob sr rt
+%clear all;
+%load B;
+%clc;
+%calculate std;
+%calculate every day first;
+judgeFebpercent=zeros(length(Febob),1);
+for i=1:28
+    sigma_original=sqrt(variance(Febpercent(1:1440)));
+%create a new set
+    x=0;k=1;
+    for j=1:1440
+        x(k)=Febpercent(j);
+        sigma_new=sqrt(variance(x));
+        if sigma_new<sigma_orginal
+            judgeFebpercent(1440*(i-1)+j)=1;
+            k=k+1;
+        else
+            judgeFebpercent(1440*(i-1)+j)=0;
+            x(k)=[];
+        end
+    end
+end
+
+        

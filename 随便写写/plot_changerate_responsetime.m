@@ -8,13 +8,14 @@ time=1:1440;
 %grid on;
 %figure(2);
 %for i=1:28
-%    plot(time,Febpercent(1+1440*(i-1):1440*i));
+%    scatter(time,Febpercent(1+1440*(i-1):1440*i));
 %    hold on;
 %end
 %grid on;
-figure(3);
-for i=1:28
-    plot(time,FebTime(1+1440*(i-1):1440*i));
-    hold on;
-end
-grid on;
+%figure(3);
+%for i=1:28
+%    plot(time,FebTime(1+1440*(i-1):1440*i));
+%    hold on;
+%end
+%grid on;
+for 

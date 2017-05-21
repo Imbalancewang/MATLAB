@@ -1,16 +1,14 @@
-%clear;
-%clc;
 %load B;
-%calculate February
-%calculate Febob;
-s=zeros(22,1);
-for i=1:22
-    s(i)=sum(Aprob(1+1440*(i-1):1440*i));
+vob=zeros(31,1);
+vob1=zeros(31,1);
+Marpercent1=Marpercent/100;
+Marob1=Marob.*Marpercent1;
+for i=1:31
+    vob(i)=sum(Marob1(1+1440*(i-1):1440*i));
+    vob1(i)=sum(Marob(1+1440*(i-1):1440*i));
 end
-figure(1);  
-t=1:22;
-scatter(t,s);
-title('The sum of every day in April');
-xlabel('day');
-ylabel('sum');
+day=1:31;
+scatter(day,vob);
+hold on;
+scatter(day,vob1);
 grid on;
