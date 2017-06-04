@@ -6,7 +6,7 @@ for i=1:1440
     if time(i)>=0 & time(i)<=300
         y(i)=0.0013*time(i).^2-0.5946*time(i)+81.203;
     elseif time(i)>=301 & time(i)<=700
-        y(i)=-9e-05*time(i).^3+0.1318*time(i).^2-56.811*time(i)+7720.4
+        y(i)=-9e-05*time(i).^3+0.1318*time(i).^2-56.811*time(i)+7720.4;
     elseif time(i)>=701 & time(i)<=800
         y(i)=2e-05*time(i).^4-0.0638*time(i).^3+71.187*time(i).^2-352898*time(i)+7e-06;    
     else 

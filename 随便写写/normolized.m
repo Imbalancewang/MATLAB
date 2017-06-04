@@ -2,11 +2,11 @@
 %clear all;
 %clc;
 %load B;
-ave=mean(Febob);
-var=variance(Febob);
+ave=mean(Febpercent);
+var=variance(Febpercent);
 std=sqrt(var);
-for i=1:length(Febob)
-    vob(i)=(Febob(i)-ave)/std;
+for i=1:length(Febpercent)
+    vob(i)=(Febpercent(i)-ave)/std;
 end
 time=1:1440;
 for i=1:28
@@ -14,6 +14,6 @@ for i=1:28
     hold on;
 end
 grid on;
-title('标准化后2月份时间和交易量关系图');
+title('标准化后2月份时间和成功率关系图');
 xlabel('时间轴');
-ylabel('标准化后的交易量');
+ylabel('标准化后的成功率');
