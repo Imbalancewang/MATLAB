@@ -1,0 +1,34 @@
+%restandard retask_lat;
+%retask_long;
+%retask_limit_sum;
+%retasktomember_min_distance;
+%renumberofmember_distance_it15;
+%reprice;
+%formula=(x-min)/(max-min);
+%---------------------------------------
+restandard_retask_lat=zeros(length(retask_lat),1);
+restandard_retask_long=zeros(length(retask_long),1);
+restandard_retask_limit_sum=zeros(length(retask_limit_sum),1);
+restandard_retasktomember_min_distance=zeros(length(retasktomember_min_distance),1);
+restandard_renumberofmember_distance_it15=zeros(length(renumberofmember_distance_it15),1);
+restandard_reprice=zeros(length(reprice),1);
+min_retask_lat=min(retask_lat);
+max_retask_lat=max(retask_lat);
+min_retask_long=min(retask_long);
+max_retask_long=max(retask_long);
+min_retask_limit_sum=min(retask_limit_sum);
+max_retask_limit_sum=max(retask_limit_sum);
+min_retasktomember_min_distance=min(retasktomember_min_distance);
+max_retasktomember_min_distance=max(retasktomember_min_distance);
+min_renumberofmember_distance_it15=min(renumberofmember_distance_it15);
+max_renumberofmember_distance_it15=max(renumberofmember_distance_it15);
+min_reprice=min(reprice);
+max_reprice=max(reprice);
+for i=1:length(retask_lat)
+    restandard_retask_lat(i)=(retask_lat(i)-min_retask_lat)/(max_retask_lat-min_retask_lat);
+    restandard_retask_long(i)=(retask_long(i)-min_retask_long)/(max_retask_long-min_retask_long);
+    restandard_retask_limit_sum(i)=(retask_limit_sum(i)-min_retask_limit_sum)/(max_retask_limit_sum-min_retask_limit_sum);
+    restandard_retasktomember_min_distance(i)=(retasktomember_min_distance(i)-min_retasktomember_min_distance)/(max_retasktomember_min_distance-min_retasktomember_min_distance);
+    restandard_renumberofmember_distance_it15(i)=(renumberofmember_distance_it15(i)-min_renumberofmember_distance_it15)/(max_renumberofmember_distance_it15-min_renumberofmember_distance_it15);
+    restandard_reprice(i)=(reprice(i)-min_reprice)/(max_reprice-min_reprice);
+end

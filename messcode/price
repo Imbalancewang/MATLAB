@@ -1,0 +1,13 @@
+subsequence=find(price==67.5)
+figure(1);
+for i=1:length(subsequence)
+    if judge(subsequence(i))==1
+        scatter(lat(subsequence(i)),long(subsequence(i)),'g')
+        hold on;
+    else
+        scatter(lat(subsequence(i)),long(subsequence(i)),'r')
+        hold on;
+    end
+end
+title('67.5 lat-price')
+grid on;
